@@ -1,0 +1,62 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+@import "../../scss/typography";
+
+.policyBlock {
+  padding-top: 5rem;
+  .sectionTitle {
+    font-size: 2.25rem;
+    font-weight: 600;
+    line-height: 108%;
+    letter-spacing: 0.0225rem;
+  }
+  .ctaBtn {
+    padding: 0.81rem 1.31rem;
+  }
+  .policyWrap {
+    margin-top: 2rem;
+    height: 647px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    &__item {
+      @extend %d-flex;
+      align-items: flex-end;
+      border-right: 1px solid rgba(255, 255, 255, 0.2);
+      // height: 100%;
+      overflow: hidden;
+      &:hover {
+        .textWrap {
+          transform: translateY(0);
+        }
+      }
+      .textWrap {
+        max-width: 228px;
+        margin-left: 2rem;
+        margin-bottom: 2.5rem;
+        transform: translateY(80px);
+        transition: all 0.5s ease-in;
+      }
+    }
+
+    h4 {
+      color: $color-white;
+      font-size: 2rem;
+      font-weight: 600;
+      line-height: 108%;
+      letter-spacing: 0.02rem;
+      margin-bottom: 1.5rem;
+    }
+    .excerpt {
+      color: $color-white;
+      font-size: 0.875rem;
+      font-weight: 400;
+      line-height: 150%;
+    }
+  }
+}

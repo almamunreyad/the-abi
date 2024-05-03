@@ -1,0 +1,25 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+.dividerLine{
+  @extend %holder;
+  border: 1px solid $color-grey-1;
+  margin: 6.25rem auto 0 auto;
+  max-width: 1382px;
+//   &.divider--alt {
+//     margin-top: 40px;
+//     margin-bottom: 32px;
+//   }
+//   &.divider--alt-2 {
+//     margin-top: 32px;
+//     margin-bottom: 40px;
+//   }
+//   &.divider--alt-3 {
+//     margin-top: 80px;
+//     margin-bottom: 100px;
+//   }
+//   &.divider--alt-4 {
+//     margin-top: 100px;
+//     margin-bottom: 100px;
+//   }
+}

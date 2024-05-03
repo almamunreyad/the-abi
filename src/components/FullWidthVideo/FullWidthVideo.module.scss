@@ -1,0 +1,19 @@
+@import "../../scss/variables";
+
+.fullWidthVideo {
+  padding-top: 6.25rem;
+  img {
+    height: 647px;
+  }
+  span {
+    color: $color-purple-p;
+    text-align: center;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    opacity: 0.5;
+    margin-top: 1.2rem;
+    display: block;
+  }
+}

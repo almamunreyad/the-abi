@@ -1,0 +1,141 @@
+.sectionTitle {
+  color: $color-white;
+  position: relative;
+  padding-left: 1rem;
+  margin-bottom: 1.25rem;
+  font-size: 1.875rem;
+  @media (min-width: 768px) {
+    font-size: 3rem;
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    width: 3px;
+    height: 79%;
+    left: 0;
+    bottom: 11px;
+    background-color: $color-yellow-p;
+  }
+}
+// =========== end of section title =============
+
+
+.titleBlock {
+  @extend %d-flex;
+  align-items: center;
+  .sectionTitle {
+    margin: 0 auto;
+    color: $color-purple-p;
+    padding-left: 0;
+    @media (min-width: 768px) {
+      margin: 0;
+    }
+    &::before{
+      content: none;
+    }
+  }
+  .btnBlock {
+    margin: auto 0 auto auto;
+    display: none;
+    @media (min-width: 768px) {
+      display: block;
+    }
+  }
+  
+}
+// =========== end of title block =============
+
+
+
+.infoWrap {
+  margin-bottom: 2.125rem;
+  .catDateWrap {
+    @extend %d-flex;
+    align-items: center;
+    span {
+      padding-left: 0.625rem;
+      display: block;
+      // position: relative;
+      // &::after {
+      //   position: absolute;
+      //   content: "";
+      //   // background-color: $color-white;
+      //   height: 14px;
+      //   width: 2px;
+      //   left: 0;
+      //   bottom: 4px;
+      //   opacity: 0.7;
+      // }
+    }
+    &__category {
+      @extend %cat-date;
+      padding-right: 0.625rem;
+    }
+    &__date {
+      //   color: $color-white;
+      border-left: 1px solid $color-Grey-4;
+      @extend %cat-date;
+    }
+    &__position {
+      color: $color-purple-p;
+      @extend %cat-date;
+      padding-left: 0.625rem;
+      span {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        border-left: 1px solid $color-Grey-4;
+        line-height: 0.8rem;
+      }
+    }
+  }
+  //   .excerpt {
+  //     margin-top: 1rem;
+  //   }
+}
+// ============== end of info wrap ===============
+
+
+
+
+.leftBorder {
+  margin-left: 1.5rem;
+  // margin-bottom: 32px;
+  // padding: 0 24px 0 16px;
+  padding-left: 1rem;
+  border-left: 3px solid $color-yellow-p;
+  &.borderTeal {
+    border-left: 3px solid $color-teal-s;
+  }
+  &.borderCyan {
+    border-left: 3px solid $color-cyan-s;
+  }
+  &.borderCoral {
+    border-left: 3px solid $color-coral-s;
+  }
+
+  //   position: relative;
+  //   &::before {
+  //     position: absolute;
+  //     content: "";
+  //     background-color: var(--color-yellow-p);
+  //     height: 96px;
+  //     width: 3px;
+  //     left: 0;
+  //     bottom: 3px;
+  //
+}
+// =========== end of left border =============
+
+.colorTeal {
+  color: $color-teal-s;
+}
+.colorCyan {
+  color: $color-cyan-s;
+}
+.colorCoral {
+  color: $color-coral-s;
+}
+// =========== end of color title =============
+
+
+
