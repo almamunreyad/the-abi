@@ -42,7 +42,14 @@ export default function TextImgBlock({ additionalClass, data }) {
             </div>
 
             <div className={style.contentWrap__img}>
-              <img src={data.image} alt="" />
+              <div
+                className={style.svgImg}
+                style={{ backgroundImage: `url(/images/Vector6.svg)` }}
+              >
+              </div>
+              <div className={style.imgWrap}>
+                <img src={data.image} alt="" />
+              </div>
             </div>
           </div>
         </div>

@@ -3,16 +3,20 @@
 import Link from "next/link";
 import style from "./SliderBanner.module.scss";
 
-import React, { useRef, useState } from "react";
-// Import Swiper React components
+// import Swiper core and required modules
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
+import "swiper/css/navigation";
 import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
-// import required modules
-import { Pagination } from "swiper/modules";
+import "swiper/scss";
+import "swiper/scss/navigation";
+import "swiper/scss/pagination";
 
 export default function SliderBanner() {
   return (
@@ -21,17 +25,21 @@ export default function SliderBanner() {
         pagination={{
           dynamicBullets: true,
         }}
-        modules={[Pagination]}
-        className="bannerSlider"
+        // install Swiper modules
+        modules={[Navigation, Pagination, A11y]}
+        navigation
+        onSwiper={(swiper) => console.log(swiper)}
+        onSlideChange={() => console.log("slide change")}
+        classNameName="bannerSlider"
       >
         <SwiperSlide>
           <div
             className={style.backgroundContent}
             style={{ backgroundImage: `url(/images/Image2.jpg)` }}
           >
-            <div class={`holder ${style.holder}`}>
-              <div class={style.textWrap}>
-                <h1 class={style.sectionTitle}>Policy & Guidance</h1>
+            <div className={`holder ${style.holder}`}>
+              <div className={style.textWrap}>
+                <h1 className={style.sectionTitle}>Policy & Guidance</h1>
               </div>
             </div>
           </div>
@@ -42,9 +50,9 @@ export default function SliderBanner() {
             className={style.backgroundContent}
             style={{ backgroundImage: `url(/images/Image2.jpg)` }}
           >
-            <div class={`holder ${style.holder}`}>
-              <div class={style.textWrap}>
-                <h1 class={style.sectionTitle}>Policy & Guidance</h1>
+            <div className={`holder ${style.holder}`}>
+              <div className={style.textWrap}>
+                <h1 className={style.sectionTitle}>Policy & Guidance</h1>
               </div>
             </div>
           </div>
@@ -55,9 +63,9 @@ export default function SliderBanner() {
             className={style.backgroundContent}
             style={{ backgroundImage: `url(/images/Image2.jpg)` }}
           >
-            <div class={`holder ${style.holder}`}>
-              <div class={style.textWrap}>
-                <h1 class={style.sectionTitle}>Policy & Guidance</h1>
+            <div className={`holder ${style.holder}`}>
+              <div className={style.textWrap}>
+                <h1 className={style.sectionTitle}>Policy & Guidance</h1>
               </div>
             </div>
           </div>
@@ -68,9 +76,9 @@ export default function SliderBanner() {
             className={style.backgroundContent}
             style={{ backgroundImage: `url(/images/Image2.jpg)` }}
           >
-            <div class={`holder ${style.holder}`}>
-              <div class={style.textWrap}>
-                <h1 class={style.sectionTitle}>Policy & Guidance</h1>
+            <div className={`holder ${style.holder}`}>
+              <div className={style.textWrap}>
+                <h1 className={style.sectionTitle}>Policy & Guidance</h1>
               </div>
             </div>
           </div>
@@ -81,9 +89,9 @@ export default function SliderBanner() {
             className={style.backgroundContent}
             style={{ backgroundImage: `url(/images/Image2.jpg)` }}
           >
-            <div class={`holder ${style.holder}`}>
-              <div class={style.textWrap}>
-                <h1 class={style.sectionTitle}>Policy & Guidance</h1>
+            <div className={`holder ${style.holder}`}>
+              <div className={style.textWrap}>
+                <h1 className={style.sectionTitle}>Policy & Guidance</h1>
               </div>
             </div>
           </div>
@@ -116,5 +124,5 @@ export default function SliderBanner() {
 // el: ".swiper__pagination", // Use a valid DOM element here
 //           type: "bullets",
 //           clickable: true,
-//           bulletClass: "bg-amber-400",
-//           bulletActiveClass: "bg-green-400",
+//           bulletclassName: "bg-amber-400",
+//           bulletActiveclassName: "bg-green-400",

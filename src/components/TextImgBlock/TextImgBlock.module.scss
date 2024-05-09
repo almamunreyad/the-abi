@@ -64,7 +64,6 @@
       max-width: 100%;
       height: 502.803px;
       order: 1;
-      filter: drop-shadow(1.18rem 1.18rem $color-yellow-p);
       margin-left: auto;
 
       @media (min-width: 768px) {
@@ -75,24 +74,40 @@
       @media (min-width: 992px) {
         max-width: 470.364px;
       }
-      img {
-        height: 100%;
+      .svgImg {
+        @extend %bg-cover;
+        background-size: contain;
+        background-position: right;
+        max-width: 473.067px;
         width: 100%;
-        object-fit: cover;
-        clip-path: polygon(
-          0 24%,
-          37% 24%,
-          37% 0,
-          100% 0,
-          100% 0,
-          100% 0,
-          100% 100%,
-          72% 100%,
-          71% 77%,
-          14% 78%,
-          14% 56%,
-          0 56%
-        );
+        height: 505.506px;
+        position: absolute;
+        top: -26px;
+        right: 64px;
+        z-index: 5;
+      }
+      .imgWrap {
+        position: relative;
+        filter: drop-shadow(1.18rem 1.18rem $color-yellow-p);
+        img {
+          width: 100%;
+          height: 502.803px;
+          object-fit: cover;
+          clip-path: polygon(
+            0 22%,
+            25% 22%,
+            25% 0,
+            100% 0,
+            100% 0,
+            99% 0,
+            99% 99%,
+            66.5% 99%,
+            66.5% 75%,
+            11% 75%,
+            11% 56%,
+            0 56%
+          );
+        }
       }
     }
   }

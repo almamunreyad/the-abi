@@ -43,15 +43,15 @@
   }
 }
 
-.bannerSlider {
-  @extend .holder;
-  // padding: 0 2.5rem;
-  @extend %d-flex;
-  justify-content: center;
-  @media (min-width: 768px) {
-    justify-content: flex-end;
-  }
-}
+// .bannerSlider {
+//   @extend .holder;
+//   // padding: 0 2.5rem;
+//   @extend %d-flex;
+//   justify-content: center;
+//   @media (min-width: 768px) {
+//     justify-content: flex-end;
+//   }
+// }
 
 .swiperController {
   position: absolute;

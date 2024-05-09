@@ -11,7 +11,7 @@ const page = () => {
     sectionTitle: <><span>About Us</span> lorem ipsum sit amet egestas</>,
     para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Habitasse suspendisse egestas volutpat, eu, nisi, sapien.",
     btnLabel: 'Join The ABI',
-    image: "/images/matthew-foulds-S1mKqlcHWU8-unsplash 2.jpg",
+    image: "/images/aaron-huber-KxeFuXta4SE-unsplash 1.jpg",
 
   };
 
